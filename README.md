@@ -14,7 +14,7 @@ Módulo de Programación del ciclo formativo de grado superior de Desarrollo de 
 
 ## Presentación
 
-  [Presentación del módulo](./resources/Documents/Presentacion.pdf)
+  [Presentación del módulo](https://github.com/jguiben709/Programacion_26-27/blob/master/resources/Documents/Presentaci%C3%B3n.pdf)
   
 
 ## Contenidos
