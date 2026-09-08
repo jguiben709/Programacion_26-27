@@ -2,7 +2,7 @@
 
 Programación. Presentación. 1DAW. Curso 2025/2026.
 
-![imagen](./Images/Programacion.png)
+![imagen](resources/Images/Programacion.png)
 
 - [Programación - Presentación](#programación---presentación)
   - [Contenidos](#contenidos)
