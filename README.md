@@ -1,8 +1,8 @@
 # Programación - Presentación
 
-Programación. Presentación. 1DAW. Curso 2025/2026.
+Módulo de Programación del ciclo formativo de grado superior de Desarrollo de Aplicaciones Web (DAW) del IES Jaroso, en el curso 2026/2027.
 
-![imagen](resources/Images/Programacion.png)
+![imagen](resources/Documents/Images/Programacion.png)
 
 - [Programación - Presentación](#programación---presentación)
   - [Contenidos](#contenidos)
@@ -11,6 +11,11 @@ Programación. Presentación. 1DAW. Curso 2025/2026.
   - [Autor](#autor)
     - [Contacto](#contacto)
   - [Licencia de uso](#licencia-de-uso)
+
+## Presentación
+
+  [Presentación del módulo](resources/Documents/Presentacion.pdf)
+  
 
 ## Contenidos
 
