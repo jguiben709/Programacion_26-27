@@ -14,7 +14,7 @@ Módulo de Programación del ciclo formativo de grado superior de Desarrollo de 
 
 ## Presentación
 
-  [Presentación del módulo](resources/Documents/Presentacion.pdf)
+  [Presentación del módulo](./resources/Documents/Presentacion.pdf)
   
 
 ## Contenidos
