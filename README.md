@@ -14,15 +14,15 @@ Programación. Presentación. 1DAW. Curso 2025/2026.
 
 ## Contenidos
 
-1. [Introducción a la programación de software](https://github.com/jjguillen/programacion_2025-2026)
-2. [Programación Estructurada y Modular](https://github.com/jjguillen/programacion_2025-2026)
-3. [Aplicación de las estructuras de almacenamiento](https://github.com/jjguillen/programacion_2025-2026)
-4. [Programación Orientada a Objetos](https://github.com/jjguillen/programacion_2025-2026)
-5. [Programación Avanzada Orientada a Objetos](https://github.com/jjguillen/programacion_2025-2026)
-6. [Programación Funcional, Genérica y Colecciones](https://github.com/jjguillen/programacion_2025-2026)
-7. [Lectura y escritura de información externa. Ficheros](https://github.com/jjguillen/programacion_2025-2026)
-8. [Programación con Bases de Datos](https://github.com/jjguillen/programacion_2025-2026)
-9. [Programación Interactiva  e Interfaces Gráficas de Usuario](https://github.com/jjguillen/programacion_2025-2026)
+1. [Introducción a la programación de software]()
+2. [Programación Estructurada y Modular]()
+3. [Aplicación de las estructuras de almacenamiento]()
+4. [Programación Orientada a Objetos]()
+5. [Programación Avanzada Orientada a Objetos]()
+6. [Programación Funcional, Genérica y Colecciones]()
+7. [Lectura y escritura de información externa. Ficheros]()
+8. [Programación con Bases de Datos]()
+9. [Programación Interactiva  e Interfaces Gráficas de Usuario]()
 10. Proyecto Aplicado
 
 El índice y contenidos puede variar a lo largo del curso para adaptarse al proceso de enseñanza-aprendizaje.
@@ -53,7 +53,7 @@ enseñanzas mínimas, los resultados de aprendizaje son:
 
 ## Autor
 
-Codificado por [Javier Guillén](https://github.com/jjguillen)
+Codificado por [Javier Guillén](https://github.com/jguiben709)
 
 ### Contacto
 
