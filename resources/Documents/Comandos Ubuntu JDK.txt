@@ -1,0 +1,4 @@
+sudo apt update    ->   sincronizar repositorio de paquetes con los servidores de ubuntu
+sudo apt upgrade   ->   actualizar los paquetes que tengas versiones nuevas para actualizar
+sudo apt install <paquete>    ->     instala un paquete del repositorio
+sudo apt install openjdk-25-jdk  ->  instala jdk 25 en nuestra consola de ubuntu

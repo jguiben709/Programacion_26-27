@@ -3,7 +3,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.print("Bienvenidos a la Programación IES Jaroso");
+        double radio;
+        double superficie;
+        double perimetro;
+
+        radio = 13; //Ejemplo
+        IO.println("El radio es:  " + radio);
+
+        superficie = Math.PI * Math.pow(radio, 2);
+        perimetro = 2 * Math.PI * radio;
+
+        IO.println("La superficie es: " + superficie);
+        IO.println("El perimetro es: " + perimetro);
 
 
     }
