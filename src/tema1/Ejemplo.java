@@ -8,7 +8,7 @@ public class Ejemplo {
         IO.println(nombre);
 
         IO.println("Un cambio");
-        IO.println("Estoy en casa");
+        IO.println("Estoy en casa otra vez");
 
 
     }
