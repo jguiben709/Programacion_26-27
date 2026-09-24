@@ -1,6 +1,6 @@
 package tema1;
 
-public class Ejemplo {
+public class Ejemplo { 
 
     static void main() {
 
