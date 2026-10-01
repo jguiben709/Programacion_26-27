@@ -1,6 +1,6 @@
 package tema1;
 
-public class EjemploOperadoresLogicos {
+public class EjercicioOperadoresLogicos {
 
     public static void main(String[] args) {
         
