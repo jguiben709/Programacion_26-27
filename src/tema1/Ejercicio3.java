@@ -2,6 +2,7 @@ package tema1;
 
 public class Ejercicio3 {
 
+
     public static void main(String[] args) {
         
         /*
@@ -13,11 +14,8 @@ public class Ejercicio3 {
             Cuatro tercios * PI * radio al cubo
         */
 
-        int radioFutbol = 11;
-        int radioBasket = 12;
-        double volumenFutbol = 0.0;
-        double volumenBasket = 0.0;
-        double volumenMaximo = 0.0;
+        int radioFutbol = 11, radioBasket = 12;
+        double volumenFutbol = 0.0, volumenBasket = 0.0, volumenMaximo = 0.0;
 
         volumenFutbol = (4.0 * Math.PI * Math.pow(radioFutbol,3)) / 3;
         volumenBasket =  (4.0 / 3.0) * Math.PI * Math.pow(radioBasket,3);
@@ -29,12 +27,10 @@ public class Ejercicio3 {
         volumenMaximo = Math.max(volumenFutbol, volumenBasket);
         IO.println("El volumen mayor de los dos es: " + volumenMaximo);
 
-        
-
-            
-
-
+    
 
     }
+
+
     
 }
