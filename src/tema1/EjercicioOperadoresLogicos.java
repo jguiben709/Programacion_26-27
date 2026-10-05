@@ -25,6 +25,29 @@ public class EjercicioOperadoresLogicos {
         
         */
 
+        //DEFINIR LAS VARIABLES
+        int edad = 18;
+        int altura = 135;
+
+        boolean dragon = false;
+        boolean mini = false;
+        boolean subir = false;
+
+        dragon = (edad >= 12) && (altura >= 140); // && Y, se cumplen las dos condiciones
+        IO.println("Puede montar en dragon: " + dragon);
+
+        // | - AltGr + 1
+        mini = (edad < 12) || (altura < 140); // || O, se cumple una de las condiciones
+        IO.println("Puede montar en mini mini: " + mini);
+
+        subir = dragon && mini; //Que puede subir a las dos
+        IO.println("Puede subir a las dos " + subir);
+
+
+
+
+
+
 
     }
 }
