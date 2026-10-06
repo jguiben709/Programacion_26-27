@@ -31,9 +31,7 @@ public class EjemploScanner {
         altura = Integer.parseInt(alturaCadena);
         //altura = Integer.parseInt(sc.nextLine());
         IO.println("La altura es: " + altura);
-
         altura++;
-
         IO.println("Has crecido, la altura es: " + altura);
 
         sc.close();
