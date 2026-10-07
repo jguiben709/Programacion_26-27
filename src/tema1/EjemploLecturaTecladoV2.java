@@ -22,7 +22,5 @@ public class EjemploLecturaTecladoV2 {
         IO.println("Número de teléfono: " + numTelefono);
         IO.println("Código postal: " + codigoPostal);
 
-
-
     }
 }
