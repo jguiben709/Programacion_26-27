@@ -22,6 +22,10 @@ public class Ejercicio5 {
             - Usa Math.log para el logaritmo (ln)
             - Usa operadores lógicos, no uses "if"
             - Si quieres probarte muestra los resultados con dos decimales únicamente
+
+            Variables:
+            - double av, ve, mo, mf
+            - boolean llegaOrbita
         
         */
 
