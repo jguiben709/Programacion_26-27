@@ -5,10 +5,10 @@ public class Ejercicioclase1 {
         
         /*
             Tenemos un personaje de videojuego con dos propiedades
-            - armadura -> boolean
+            - armadura -> int
             - vida -> int
 
-            Si el personaje tiene armadura aunque no tenga vida, sobrevive
+            Si el personaje tiene armadura mayor que cero aunque no tenga vida, sobrevive
             Si el personaje no tiene armadura pero la vida es igual o menor a cero muere
 
             Pide por teclado la vida del personaje y si tiene armadura o no
@@ -16,7 +16,7 @@ public class Ejercicioclase1 {
         */
 
 
-            
+
 
 
 
