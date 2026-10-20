@@ -23,7 +23,46 @@ public class Ejercicio3 {
             
         */
 
-        
+        int humedad = 0, temperatura = 0, llueve = 0;
+        boolean estaLloviendo = true;
+
+        humedad = (int) (Math.random() * (100 - 1));
+        temperatura = (int) (Math.random() * (50 - (-50) + 1)) - 50;
+        llueve = (int) (Math.random() * (2)); // 1 o 0
+
+        if (llueve == 1) {
+            estaLloviendo = true;
+            IO.println("Está lloviendo");
+        } else {
+            estaLloviendo = false;
+            IO.println("No está lloviendo");
+        }
+
+        IO.println("La humedad es: " + humedad);
+        IO.println("La temperatura es: " + temperatura);
+
+
+        if (estaLloviendo) {
+            IO.println("NO REGAMOS");
+        } else {
+            if (humedad < 30) {
+                if (temperatura > 30) {
+                    IO.println("RIEGO INTENSIVO");
+                } else {
+                    IO.println("RIEGO NORMAL");
+                }
+            } else if (humedad >= 30 && humedad <= 59) { //Podéis quitar "humedad >= 30 &&"
+                if (temperatura >= 35) {
+                    IO.println("RIEGO NORMAL");
+                } else {
+                    IO.println("RIEGO LIGERO");
+                }
+            } else { // > 60
+                IO.println("NO REGAR");
+            }          
+        }
+
+
 
 
 
