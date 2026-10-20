@@ -20,9 +20,10 @@ public class Ejercicio3 {
             4. Si la humedad es mayor que 60: no regar
 
             Muestra mensaje de regar (intensivo, normal o ligero) o de no regar según los datos.
-    
-        
+            
         */
+
+        
 
 
 

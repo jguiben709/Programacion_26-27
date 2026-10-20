@@ -28,7 +28,7 @@ public class Ejercicioclase2 {
             
 
             
-            int n = (int) (Math.random() * (maximo - minimo + 1)) + minimo
+            int n = (int) (Math.random() * (maximo - (minimo) + 1)) + minimo
         */
 
         int vida = 100;
@@ -36,7 +36,7 @@ public class Ejercicioclase2 {
 
         int dado = (int) (Math.random() * (20 - 1 + 1)) + 1;  
         IO.println("TU TIRADA ES: " + dado);
-        
+
         int tieneEscudo = (int) (Math.random() * (2 - 1 + 1)) + 1;  
         if (tieneEscudo == 1) {
             escudo = true;
