@@ -9,6 +9,7 @@ public class EjercicioSwitch1 {
             Conviertélo al enum y muestra el mensaje:
             - LUNES, MARTES, MIERCOLES, JUEVES: hoy tengo Programación con Javi
             - VIERNES: hoy no tengo Programación con Javi, vaya!!!
+            - SABADO, DOMINGO: biennn, no hay clase!!!
         
         */
 
