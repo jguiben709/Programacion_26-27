@@ -15,10 +15,12 @@ public class EjemploSwitch2 {
             Implementa eso con el nuevo switch, y para cada opción haz dos líneas:
             - IO.println("Has seleccionado la opción " + opcion);
             - IO.println("MOSTRAR USUARIO")
+
+            Si no es una de esas opciones mostrar: OPCIÓN INCORRECTA
         */
 
 
-            
+
 
 
 
