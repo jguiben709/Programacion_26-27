@@ -21,12 +21,12 @@ public class EjemploSwitch2 {
 
         int opcion=0;
 
-        IO.println("Dime una opción: ");
-        IO.println("- 1. Mostrar todos los usuarios");
-        IO.println("- 2. Mostrar un usuario");
-        IO.println("- 3. Modificar un usuario");
-        IO.println("- 4. Eliminar un usuario");
-        IO.println("- 5. Salir");
+        IO.println("Dime una opción: \n" + 
+                   "- 1. Mostrar todos los usuarios \n" + 
+                   "- 2. Mostrar un usuario \n" + 
+                   "- 3. Modificar un usuario \n" +
+                   "- 4. Eliminar un usuario \n" +
+                   "- 5. Salir");
 
         opcion = Integer.parseInt(IO.readln());
         IO.println("Has seleccionado la opción " + opcion);
