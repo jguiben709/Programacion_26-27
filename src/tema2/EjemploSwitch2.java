@@ -29,26 +29,22 @@ public class EjemploSwitch2 {
         IO.println("- 5. Salir");
 
         opcion = Integer.parseInt(IO.readln());
+        IO.println("Has seleccionado la opción " + opcion);
 
         switch (opcion) {
             case 1 -> {
-                IO.println("Has seleccionado la opción " + opcion);
                 IO.println("Mostrar todos los usuarios");
             }
             case 2 -> {
-                IO.println("Has seleccionado la opción " + opcion);
                 IO.println("Mostrar un usuario");
             }
             case 3 -> {
-                IO.println("Has seleccionado la opción " + opcion);
                 IO.println("Modificar un usuario");
             }
             case 4 -> {
-                IO.println("Has seleccionado la opción " + opcion);
                 IO.println("Eliminar un usuario");
             }
             case 5 -> {
-                IO.println("Has seleccionado la opción " + opcion);
                 IO.println("Hasta pronto ...");
             }
             default -> IO.println("Opción incorrecta, escriba un número del 1 al 5");
