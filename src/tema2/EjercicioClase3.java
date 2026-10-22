@@ -14,6 +14,20 @@ public class EjercicioClase3 {
         
         */
 
+        int numAlumnos=0;
+        int costeViaje=0;
+
+        numAlumnos = Integer.parseInt(IO.readln("Dime el número de alumnos: "));
+        if (numAlumnos > 30) {
+            costeViaje = numAlumnos * 5;
+        } else if (numAlumnos >= 15 && numAlumnos <= 30) {
+            costeViaje = numAlumnos * 8;
+        } else if (numAlumnos < 15) {
+            costeViaje = 1000;
+        }
+
+        IO.println("El coste del viaje es: " + costeViaje);
+
 
 
     }
