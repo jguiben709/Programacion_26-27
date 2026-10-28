@@ -23,7 +23,7 @@ public class EjemploMenu {
             IO.println("4. Salir");
 
             //Pedir por teclado la opción
-            opcion = Integer.parseInt( IO.readln("Elige una opción (1-4):") );
+            opcion = Integer.parseInt( IO.readln("Elige una opción (1-4): ") );
 
             //Dependiendo de la opción seleccionada hacemos una cosa u otra
             switch (opcion) {
@@ -31,8 +31,13 @@ public class EjemploMenu {
                     IO.println("Tu saldo es de " + saldo + " euros");
                 }
                 case 2 -> {
-                    ingreso = Double.parseDouble(IO.readln("Cuánto quieres ingresar?"));
-                    saldo = saldo + ingreso;
+                    ingreso = Double.parseDouble(IO.readln("Cuánto quieres ingresar? "));
+                    //Para no introducir un ingreso negativo
+                    if (ingreso > 0) {
+                        saldo = saldo + ingreso;
+                    } else {
+                        IO.println("Cantidad de ingreso errónea");
+                    }
                 }
                 case 3 -> {
                     IO.println("Hola qué tal todo, ¿mi dinero está creciendo?");
