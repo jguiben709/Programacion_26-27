@@ -17,9 +17,16 @@ public class EjercicioContarNumDigitos {
          */
 
         int numero;
+        int contador = 0;
 
         numero = Integer.parseInt(IO.readln("Dime un número: "));
 
+        while (numero != 0) {
+            numero = numero / 10;
+            contador++;
+        }
+
+        IO.println("El número de dígitos es: " + contador);
 
 
 
