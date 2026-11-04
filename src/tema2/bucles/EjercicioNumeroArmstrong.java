@@ -8,6 +8,9 @@ public class EjercicioNumeroArmstrong {
         elevados al número de dígitos.
 
         Ej: 153 = (1 elevado a 3) + (5 elevado a 3) + (3 elevado a 3)
+            contador = número de dígitos
+            acumulador = (1 elevado a 3) + (5 elevado a 3) + (3 elevado a 3)
+            booleano -> (numero == acumulador)
 
         Contador: para sacar el número de dígitos
         Acumulador: Para sumar en una variable cada (dígito elevado a numero de dígitos)
