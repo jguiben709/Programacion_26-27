@@ -11,7 +11,12 @@ public class EjercicioTablaMultiplicar {
         3 x 10 = 30
         */
 
+        int numero=0;
 
+        numero = Integer.parseInt(IO.readln("Dime un número: "));
+        for(int i=1; i <= 10; i++) {
+            IO.println(numero + " x " + i + " = " + (numero * i));
+        }
 
 
 
