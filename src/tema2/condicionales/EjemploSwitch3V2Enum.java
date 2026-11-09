@@ -1,4 +1,4 @@
-package tema2;
+package tema2.condicionales;
 
 public class EjemploSwitch3V2Enum {
     public static void main(String[] args) {
