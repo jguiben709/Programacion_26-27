@@ -7,7 +7,9 @@ public class Ejercicio1 {
      * 2. Máximo de tres números
      * 3. Es primo
      * 4. Mostrar tabla multiplicar
-     * 5. Salir
+     * 5. Factorial de un número
+     * 6. Mostrar números impares entre dos números
+     * 7. Salir
      */
 
     /**
@@ -80,6 +82,20 @@ public class Ejercicio1 {
             return n2;
     }
 
+    /**
+     * Devuelve el factorial de un número
+     * 7! -> 7*6*5*4*3*2*1
+     * @param numero
+     * @return
+     */
+    static double factorial(int numero) {
+        double acumulador = 1.0;
+        for(int i = numero; i > 0; i--) {
+            acumulador = acumulador * i;
+        }
+        return acumulador;
+    }
+
 
     /**
      * Pinta las opciones del menú
@@ -89,7 +105,9 @@ public class Ejercicio1 {
         IO.println("2. Máximo de tres números");
         IO.println("3. Es primo");
         IO.println("4. Tabla de multiplicar");
-        IO.println("5. Salir");
+        IO.println("5. Factorial");
+        IO.println("6. Impares en intervalo");
+        IO.println("7. Salir");
     }
 
     static void main() {
@@ -135,12 +153,21 @@ public class Ejercicio1 {
                     tablaMultiplicar(numero);
                 }
                 case 5 -> {
+                    //5! -> 5*4*3*2*1
+                    IO.println("--- FACTORIAL ---");
+                    numero = Integer.parseInt(IO.readln("Dime un número: "));
+                    IO.println("Factorial de " + numero + " es " + factorial(numero));
+                }
+                case 6 -> {
+                    IO.println("--- IMPARES EN UN INTERVALO ---");
+                }
+                case 7 -> {
                     IO.println("Hasta pronto");
                 }
                 default -> IO.println("Opción incorrecta");
             }
 
-        } while (opcion != 5);
+        } while (opcion != 7);
 
 
 
