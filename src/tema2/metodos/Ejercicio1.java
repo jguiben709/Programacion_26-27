@@ -17,7 +17,7 @@ public class Ejercicio1 {
      * @param numero
      * @return booleano, true par, false impar
      */
-    static boolean esPar(int numero) {
+    public static boolean esPar(int numero) {
         if (numero % 2 == 0) {
             return true;
         }
@@ -42,7 +42,7 @@ public class Ejercicio1 {
      * @param numero
      * @return
      */
-    static boolean esPrimo(int numero) {
+    public static boolean esPrimo(int numero) {
         //Si encontramos un divisor distinto de 1 y de sí mismo, devuelve false
         for(int i=2; i < numero; i++) {
             if (numero % i == 0) {
@@ -96,6 +96,23 @@ public class Ejercicio1 {
         return acumulador;
     }
 
+    static void numerosImpares(int n1, int n2) {
+        int temp;
+        if (n1 > n2) {
+            //Intercambiar variable
+            temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+        for (int i = n1; i <= n2; i++) {
+            if (i % 2 != 0) {
+                IO.print(i + ", ");
+            }
+        }
+
+        IO.println();
+    }
+
 
     /**
      * Pinta las opciones del menú
@@ -118,53 +135,67 @@ public class Ejercicio1 {
 
         do {
             pintarOpciones();
-            opcion = Integer.parseInt(IO.readln("Dime una opción: "));
+            try {
+                opcion = Integer.parseInt(IO.readln("Dime una opción: "));
+            } catch (NumberFormatException ex) {
+                IO.println("Dime un número del 1 al 7 como opción válida");
+                continue;
+            }
 
-            switch (opcion) {
-                case 1 -> {
-                    IO.println("--- ES PAR ---");
-                    numero = Integer.parseInt(IO.readln("Dime un número: "));
-                    if (esPar(numero)) {
-                        IO.println("El número es par");
-                    } else {
-                        IO.println("El número es impar");
+            try {
+
+                switch (opcion) {
+                    case 1 -> {
+                        IO.println("--- ES PAR ---");
+                        numero = Integer.parseInt(IO.readln("Dime un número: "));
+                        if (esPar(numero)) {
+                            IO.println("El número es par");
+                        } else {
+                            IO.println("El número es impar");
+                        }
                     }
-                }
-                case 2 -> {
-                    IO.println("--- MÁXIMO ---");
-                    n1 = Integer.parseInt(IO.readln("Dime un número: "));
-                    n2 = Integer.parseInt(IO.readln("Dime un número: "));
-                    n3 = Integer.parseInt(IO.readln("Dime un número: "));
-                    //IO.println("El mayor de los tres es " + maximoTresNumeros(n1, n2, n3));
-                    IO.println("El mayor de los tres es " + maximoDosNumeros(maximoDosNumeros(n1,n2) , n3));
-                }
-                case 3 -> {
-                    IO.println("--- PRIMO ---");
-                    numero = Integer.parseInt(IO.readln("Dime un número: "));
-                    if (esPrimo(numero)) {
-                        IO.println(numero + " es primo");
-                    } else {
-                        IO.println(numero + " no es primo");
+                    case 2 -> {
+                        IO.println("--- MÁXIMO ---");
+                        n1 = Integer.parseInt(IO.readln("Dime un número: "));
+                        n2 = Integer.parseInt(IO.readln("Dime un número: "));
+                        n3 = Integer.parseInt(IO.readln("Dime un número: "));
+                        //IO.println("El mayor de los tres es " + maximoTresNumeros(n1, n2, n3));
+                        IO.println("El mayor de los tres es " + maximoDosNumeros(maximoDosNumeros(n1, n2), n3));
                     }
+                    case 3 -> {
+                        IO.println("--- PRIMO ---");
+                        numero = Integer.parseInt(IO.readln("Dime un número: "));
+                        if (esPrimo(numero)) {
+                            IO.println(numero + " es primo");
+                        } else {
+                            IO.println(numero + " no es primo");
+                        }
+                    }
+                    case 4 -> {
+                        IO.println("--- TABLA ---");
+                        numero = Integer.parseInt(IO.readln("Dime un número: "));
+                        tablaMultiplicar(numero);
+                    }
+                    case 5 -> {
+                        //5! -> 5*4*3*2*1
+                        IO.println("--- FACTORIAL ---");
+                        numero = Integer.parseInt(IO.readln("Dime un número: "));
+                        IO.println("Factorial de " + numero + " es " + factorial(numero));
+                    }
+                    case 6 -> {
+                        IO.println("--- IMPARES EN UN INTERVALO ---");
+                        n1 = Integer.parseInt(IO.readln("Dime un número: "));
+                        n2 = Integer.parseInt(IO.readln("Dime un número: "));
+                        numerosImpares(n1,n2);
+                    }
+                    case 7 -> {
+                        IO.println("Hasta pronto");
+                    }
+                    default -> IO.println("Opción incorrecta");
                 }
-                case 4 -> {
-                    IO.println("--- TABLA ---");
-                    numero = Integer.parseInt(IO.readln("Dime un número: "));
-                    tablaMultiplicar(numero);
-                }
-                case 5 -> {
-                    //5! -> 5*4*3*2*1
-                    IO.println("--- FACTORIAL ---");
-                    numero = Integer.parseInt(IO.readln("Dime un número: "));
-                    IO.println("Factorial de " + numero + " es " + factorial(numero));
-                }
-                case 6 -> {
-                    IO.println("--- IMPARES EN UN INTERVALO ---");
-                }
-                case 7 -> {
-                    IO.println("Hasta pronto");
-                }
-                default -> IO.println("Opción incorrecta");
+
+            } catch (Exception ex) {
+                IO.println("Error " + ex.getMessage());
             }
 
         } while (opcion != 7);
