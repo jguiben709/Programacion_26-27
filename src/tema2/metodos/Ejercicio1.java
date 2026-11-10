@@ -11,6 +11,77 @@ public class Ejercicio1 {
      */
 
     /**
+     * Comprueba que el número es par
+     * @param numero
+     * @return booleano, true par, false impar
+     */
+    static boolean esPar(int numero) {
+        if (numero % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Pinta la tabla de multiplicar del número dado
+     * @param numero
+     */
+    static void tablaMultiplicar(int numero) {
+        for (int i=1; i <= 10; i++) {
+            IO.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+
+    /**
+     * Dice si el número introducido es un número primo o no.
+     * Busca un divisor distinto de 1 o de sí mismo, si lo
+     * encuentra devuelve false, si no ha encontrado ninguno
+     * devuelve true
+     * @param numero
+     * @return
+     */
+    static boolean esPrimo(int numero) {
+        //Si encontramos un divisor distinto de 1 y de sí mismo, devuelve false
+        for(int i=2; i < numero; i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Mayor de tres números
+     * @param num1
+     * @param num2
+     * @param num3
+     * @return
+     */
+    static int maximoTresNumeros(int num1, int num2, int num3) {
+        if (num1 >= num2 && num1 >= num3) {
+            return num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    /**
+     * Máximo de dos números
+     * @param n1
+     * @param n2
+     * @return
+     */
+    static int maximoDosNumeros(int n1, int n2) {
+        if (n1 >= n2)
+            return n1;
+        else
+            return n2;
+    }
+
+
+    /**
      * Pinta las opciones del menú
      */
     static void pintarOpciones() {
@@ -19,7 +90,6 @@ public class Ejercicio1 {
         IO.println("3. Es primo");
         IO.println("4. Tabla de multiplicar");
         IO.println("5. Salir");
-
     }
 
     static void main() {
@@ -35,16 +105,34 @@ public class Ejercicio1 {
             switch (opcion) {
                 case 1 -> {
                     IO.println("--- ES PAR ---");
-                    numero = Integer.parseInt(IO.readln("Dime un número"));
+                    numero = Integer.parseInt(IO.readln("Dime un número: "));
+                    if (esPar(numero)) {
+                        IO.println("El número es par");
+                    } else {
+                        IO.println("El número es impar");
+                    }
                 }
                 case 2 -> {
                     IO.println("--- MÁXIMO ---");
+                    n1 = Integer.parseInt(IO.readln("Dime un número: "));
+                    n2 = Integer.parseInt(IO.readln("Dime un número: "));
+                    n3 = Integer.parseInt(IO.readln("Dime un número: "));
+                    //IO.println("El mayor de los tres es " + maximoTresNumeros(n1, n2, n3));
+                    IO.println("El mayor de los tres es " + maximoDosNumeros(maximoDosNumeros(n1,n2) , n3));
                 }
                 case 3 -> {
                     IO.println("--- PRIMO ---");
+                    numero = Integer.parseInt(IO.readln("Dime un número: "));
+                    if (esPrimo(numero)) {
+                        IO.println(numero + " es primo");
+                    } else {
+                        IO.println(numero + " no es primo");
+                    }
                 }
                 case 4 -> {
                     IO.println("--- TABLA ---");
+                    numero = Integer.parseInt(IO.readln("Dime un número: "));
+                    tablaMultiplicar(numero);
                 }
                 case 5 -> {
                     IO.println("Hasta pronto");
