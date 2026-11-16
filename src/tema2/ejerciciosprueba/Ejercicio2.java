@@ -41,7 +41,6 @@ public class Ejercicio2 {
     static void main() {
 
         int numTurnos=0;
-        int dado1,dado2,dado3,dado4;
         int puntuacionCubitus=0, puntuacionHumerus=0;
         int ganaCubitus=0, ganaHumerus=0;
 
