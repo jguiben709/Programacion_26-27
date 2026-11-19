@@ -16,8 +16,8 @@ public class BatallaMagos {
     public static void main(String[] args) {
 
         int numRondas=0;
-        int dadoM1, dadoM2, dadoM3;
-        int dadoG1, dadoG2;
+        int dadoM;
+        int dadoG;
         int totalRondaM=0;
         int totalRondaG=0;
         int totalM=0, totalG=0;
@@ -35,27 +35,19 @@ public class BatallaMagos {
         //A jugar
         while(numRondas > 0) {
             //Juega Merlinus
-            dadoM1 = tirarDado(8);
-            dadoM2 = tirarDado(8);
-            dadoM3 = tirarDado(8);
-            if (dadoM1 > 4) {
-                totalRondaM += dadoM1;
-            }
-            if (dadoM2 > 4) {
-                totalRondaM += dadoM2;
-            }
-            if (dadoM3 > 4) {
-                totalRondaM += dadoM3;
+            for(int i=1; i<=3; i++) {
+                dadoM = tirarDado(8);
+                if (dadoM > 4) {
+                    totalRondaM += dadoM;
+                }
             }
 
             //Juega Gandolfus
-            dadoG1 = tirarDado(12);
-            dadoG2 = tirarDado(12);
-            if (dadoG1 <= 6) {
-                totalRondaG += dadoG1;
-            }
-            if (dadoG2 <= 6) {
-                totalRondaG += dadoG2;
+            for(int i=1; i <= 2; i++) {
+                dadoG = tirarDado(12);
+                if (dadoG <= 6) {
+                    totalRondaG += dadoG;
+                }
             }
 
             //Actualizar total acumulado
@@ -64,9 +56,9 @@ public class BatallaMagos {
 
             //Mostrar ronda
             IO.println("Ronda " + numRondas);
-            IO.println("Merlinus dado1: " + dadoM1 + " dado2: " + dadoM2 + " dado3: " + dadoM3);
+            //IO.println("Merlinus dado1: " + dadoM1 + " dado2: " + dadoM2 + " dado3: " + dadoM3);
             IO.println("Merlinus total: " + totalRondaM);
-            IO.println("Gandolfus dado1: " + dadoG1 + " dado2: " + dadoG2);
+            //IO.println("Gandolfus dado1: " + dadoG1 + " dado2: " + dadoG2);
             IO.println("Gandolfus total: " + totalRondaG);
             if (totalRondaM > totalRondaG) {
                 IO.println("Merlinus gana");

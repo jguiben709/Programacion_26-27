@@ -3,8 +3,10 @@ package tema2.pruebaescrita.opcion1;
 public class ControlInvernadero {
     enum EstadoInvernadero { CALEFACCION, VENTILANDO, NORMAL }
 
+    // temp = 20   --> -2 u +3  --> 18 y 23
+
     static int generarTemp(int min, int max) {
-        return (int) (Math.random() * (max - (min) + 1)) + min;
+        return (int) (Math.random() * (max - min + 1)) + min;
     }
 
     /**
@@ -22,7 +24,8 @@ public class ControlInvernadero {
             if (tempInicial < 10 || tempInicial > 35) {
                 IO.println("Número incorrecto, debe estar entre 10 y 35");
             }
-        } while(tempInicial < 10 || tempInicial > 35);
+        } while (tempInicial < 10 || tempInicial > 35);
+        //} while (! (tempInicial >= 10 && tempInicial <= 35));
 
         return tempInicial;
     }
@@ -43,7 +46,7 @@ public class ControlInvernadero {
         for (int i = 1; i <= 24; i++) {
             //TEMPERATURA ACTUAL Y MEDIA
             tempActual = generarTemp(temperaturaInicial - 5, temperaturaInicial + 5);
-            tempMedia += tempActual;
+            tempMedia += tempActual; //acumulador
 
             //TEMPERATURA MÁXIMA Y MÍNIMA Y HORA
             if (tempActual > tempMaxima) {
@@ -55,14 +58,13 @@ public class ControlInvernadero {
                 horaMinima = i;
             }
 
-
             //ESTADO DEL INVERNADERO
             if (tempActual > 30) {
                 estado = EstadoInvernadero.VENTILANDO;
-                numHorasFueraRango++;
+                numHorasFueraRango++; //contador
             } else if (tempActual < 15) {
                 estado = EstadoInvernadero.CALEFACCION;
-                numHorasFueraRango++;
+                numHorasFueraRango++; //contador
             } else {
                 estado = EstadoInvernadero.NORMAL;
             }

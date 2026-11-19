@@ -27,13 +27,20 @@ public class AdivinaElNumero {
             if (numeroJugador == numAAdivinar) {
                 IO.println("GANASTE");
                 gana = true;
-                break;
+                break; //Termina
             }
 
             //VEMOS SI EL NÚMERO ESTÁ EN EL RANGO
             if (numeroJugador < 1 || numeroJugador > 50) {
                 IO.println("No has dicho un número entre 1 y 50");
             } else {
+                    //INDICAMOS SI ES MAYOR O MENOR
+                    if (numeroJugador > numAAdivinar) {
+                        IO.println("El número a adivinar es menor");
+                    } else {
+                        IO.println("El número a adivinar es mayor");
+                    }
+
                     //INDICAMOS SI ESTAMOS CERCA O LEJOS
                     if (Math.abs(numAAdivinar - numeroJugador) > 10) {
                         IO.println("Frío frío");

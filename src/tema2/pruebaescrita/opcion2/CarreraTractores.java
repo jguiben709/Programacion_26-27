@@ -6,10 +6,6 @@ public class CarreraTractores {
         return (int) (Math.random() * numCaras) + 1;
     }
 
-    static int generarNum(int min, int max) {
-        return (int) (Math.random() * (max - (min) + 1)) + min;
-    }
-
     static void pintar(int valor) {
         for(int i=0; i < 30; i++) {
             if (i == valor) {
@@ -75,7 +71,7 @@ public class CarreraTractores {
                 IO.print("JUGADOR: ");
                 pintar(jugador1);
                 //MOVER PC, sumamos casillas según opción generada aleatoria
-                jugador2 += mover(generarNum(1,2));
+                jugador2 += mover(tirarDado(2));
                 IO.print("PC:      ");
                 pintar(jugador2);
             }
