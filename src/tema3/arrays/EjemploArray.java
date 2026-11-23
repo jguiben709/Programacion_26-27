@@ -19,14 +19,14 @@ public class EjemploArray {
 
         //IO.println("Nota " + notas[0]);
 
-        //Recorrer el array
+        //Recorrer el array - de 0 a 9 el índice del array
         for(int i=0; i < notas.length; i++) {
             IO.println(notas[i]);
         }
 
         IO.println("--------------");
 
-        //Recorrer array del fin al principio
+        //Recorrer array del fin al principio - de 9 a 0 el índice del array
         for(int i=notas.length-1; i>=0; i--) {
             IO.println(notas[i]);
         }
