@@ -15,6 +15,7 @@ public class EjemploInicializacionArray {
         }
 
         IO.println("El total de tu compra es: " + acumulador + "€");
+        IO.println("El precio medio es: " + (acumulador / precios.length));
 
     }
 }
