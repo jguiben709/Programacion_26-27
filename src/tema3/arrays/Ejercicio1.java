@@ -32,9 +32,16 @@ public class Ejercicio1 {
                 minimo = numeros[i];
             }
         }
-        
+
+        //Ordenar el array
+        Arrays.sort(numeros);
+
         IO.println("El máximo es: " + maximo);
+        IO.println("El máximo es: " + numeros[numeros.length-1]); //Última posi.
+
         IO.println("El mínimo es: " + minimo);
+        IO.println("El mínimo es: " + numeros[0]); //Primera posición
+
         IO.println("La media es: " + (acumulador / numeros.length));
     }
 }
