@@ -26,7 +26,7 @@ public class Ejercicio3 {
 
         IO.println("Suma de las filas: " + Arrays.toString(sumaFilas));
 
-        //Suma cada columna
+        //Suma cada columna versión 1
         for(int i=0; i < matriz[0].length; i++) {
             for(int j=0; j < matriz.length; j++) {
                  columna = columna + matriz[j][i];
@@ -35,7 +35,7 @@ public class Ejercicio3 {
             columna = 0;
         }
 
-        //Suma de columnas
+        //Suma de columnas versión 2
         for (int j = 0; j < matriz[0].length; j++) {
             for(int i=0; i < matriz.length; i++) {
                 columna = columna + matriz[i][j];
