@@ -89,6 +89,7 @@ public class VictoriaConecta4 {
 
         char[][] tablero = new char[NUM_FILAS][NUM_COLUMNAS];
         int columnaJ1=0, columnaJ2=0;
+        boolean victoriaJ1=false, victoriaJ2=false;
 
         inicializarTablero(tablero);
         pintarTablero(tablero);
@@ -100,6 +101,7 @@ public class VictoriaConecta4 {
             columnaJ1--; //Resto uno para acceder al tablero 0-6
             soltarFicha(columnaJ1, tablero, 'X');
             pintarTablero(tablero);
+            victoriaJ1 = condicionVictoria('X');
 
             IO.println("JUGADOR 2");
             columnaJ2 = pedirColumna();
@@ -107,7 +109,8 @@ public class VictoriaConecta4 {
             columnaJ2--; //Resto uno para acceder al tablero 0-6
             soltarFicha(columnaJ2, tablero, 'O');
             pintarTablero(tablero);
-        } while(true);
+            victoriaJ2 = condicionVictoria('X');
+        } while(!victoriaJ1 && !victoriaJ2);
 
 
 
