@@ -112,6 +112,13 @@ public class VictoriaConecta4 {
             victoriaJ2 = condicionVictoria('X');
         } while(!victoriaJ1 && !victoriaJ2);
 
+        if (victoriaJ1) {
+            IO.println("Ha ganado el jugador 1");
+        } else if (victoriaJ2) {
+            IO.println("Ha ganado el jugador 2");
+        } else {
+            //No hemos tenido en cuenta el empate
+        }
 
 
 
