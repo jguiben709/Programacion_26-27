@@ -1,6 +1,18 @@
 package tema3.matrices;
 
 public class MoverFicha {
+
+    /**
+     * Pinta el tablero.
+     * Ceros donde no hay nada
+     * Un uno donde está el juador
+     * Un cinco el objetivo a donde ir
+     * @param m
+     * @param ficha_i
+     * @param ficha_j
+     * @param obj_i
+     * @param obj_j
+     */
     static void pintar(int[][] m, int ficha_i, int ficha_j, int obj_i, int obj_j) {
         for(int i=0; i < m.length; i++) {
             for (int j = 0; j < m[0].length; j++) {
