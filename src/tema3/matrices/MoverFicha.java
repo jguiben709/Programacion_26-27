@@ -93,6 +93,8 @@ public class MoverFicha {
             //Pintamos de nuevo el tablero con la posición modificada
             pintar(tablero, pos_i, pos_j, obj_i, obj_j);
 
+            //Comprobar que has ganado si no coincidiera inicio y objetivo
+
         } while (opcion != 5);
 
     }
