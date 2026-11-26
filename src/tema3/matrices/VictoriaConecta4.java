@@ -83,9 +83,36 @@ public class VictoriaConecta4 {
         }
     }
 
+    /**
+     *
+     * @param tablero
+     * @param tipoFicha
+     * @return
+     */
     static boolean condicionVictoria(char[][] tablero, char tipoFicha) {
         boolean victoria = false;
 
+        //Comprobar a la derecha
+        for(int i=0; i < NUM_FILAS; i++) {
+            for(int j=0; j < NUM_COLUMNAS - 3; j++) {
+                if (tablero[i][j] == tipoFicha && tablero[i][j + 1] == tipoFicha &&
+                        tablero[i][j + 2] == tipoFicha && tablero[i][j + 3] == tipoFicha) {
+                    victoria = true;
+                    break;
+                }
+            }
+        }
+
+        //Comprobar abajo
+        for (int j = 0; j < NUM_COLUMNAS; j++) {
+            for(int i=0; i < NUM_FILAS - 3; i++) {
+                if (tablero[i][j] == tipoFicha && tablero[i+1][j] == tipoFicha &&
+                        tablero[i+2][j] == tipoFicha && tablero[i+3][j] == tipoFicha) {
+                    victoria = true;
+                    break;
+                }
+            }
+        }
 
         return victoria;
     }
@@ -109,13 +136,18 @@ public class VictoriaConecta4 {
             pintarTablero(tablero);
             victoriaJ1 = condicionVictoria(tablero, 'X');
 
+            //Que no pida al jugador 2 si ya ha ganado el jugador 1
+            if (victoriaJ1)
+                break;
+
             IO.println("JUGADOR 2");
             columnaJ2 = pedirColumna();
             IO.println("Columna seleccionada: " + columnaJ2);
             columnaJ2--; //Resto uno para acceder al tablero 0-6
             soltarFicha(columnaJ2, tablero, 'O');
             pintarTablero(tablero);
-            victoriaJ2 = condicionVictoria(tablero, 'X');
+            victoriaJ2 = condicionVictoria(tablero, 'O');
+
         } while(!victoriaJ1 && !victoriaJ2);
 
         if (victoriaJ1) {
